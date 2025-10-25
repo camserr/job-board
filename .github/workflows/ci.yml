@@ -31,8 +31,4 @@ jobs:
         push: true
         tags: ${{ secrets.DOCKER_USERNAME }}/job-scraper:latest
     - name: Run tests inside container
-      run: docker run --rm ${{ secrets.DOCKER_USERNAME }}/job-scraper:latest pytest
-    - name: Run tests
-      run: |
-        export PYTHONPATH=$(pwd)
-        pytest
+      run: docker run --rm -e PYTHONPATH=src ${{ secrets.DOCKER_USERNAME }}/job-scraper:latest pytest
