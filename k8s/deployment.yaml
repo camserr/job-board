@@ -1,4 +1,4 @@
-# Deployment temporarily disabled
+# # Deployment temporarily disabled
 # apiVersion: apps/v1
 # kind: Deployment
 # metadata:
@@ -15,6 +15,12 @@
 #     spec:
 #       containers:
 #       - name: job-scraper
-#         image: yourdockerhubusername/job-scraper:latest
+#         image: "$(DOCKER_USERNAME)/job-scraper:latest"
 #         imagePullPolicy: IfNotPresent
 #         command: ["python", "src/scraper.py"]
+#         env:
+#         - name: DOCKER_USERNAME
+#           valueFrom:
+#             configMapKeyRef:
+#               name: docker-config
+#               key: username
