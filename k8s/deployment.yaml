@@ -1,0 +1,20 @@
+# Deployment temporarily disabled
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: job-scraper
+# spec:
+#   replicas: 1
+#   selector:
+#     matchLabels:
+#       app: job-scraper
+#   template:
+#     metadata:
+#       labels:
+#         app: job-scraper
+#     spec:
+#       containers:
+#       - name: job-scraper
+#         image: yourdockerhubusername/job-scraper:latest
+#         imagePullPolicy: IfNotPresent
+#         command: ["python", "src/scraper.py"]
