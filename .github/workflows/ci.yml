@@ -35,4 +35,4 @@ jobs:
     - name: Run clean data script
       run: docker run --rm -v ${{ github.workspace }}/data:/app/data ${{ secrets.DOCKER_USERNAME }}/job-scraper:latest python src/clean_data.py
     - name: Run tests inside container
-      run: docker run --rm -e PYTHONPATH=/app ${{ secrets.DOCKER_USERNAME }}/job-scraper:latest pytest
+      run: docker run --rm -e PYTHONPATH=/app -v ${{ github.workspace }}/data:/app/data ${{ secrets.DOCKER_USERNAME }}/job-scraper:latest pytest
