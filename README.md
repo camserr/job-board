@@ -14,6 +14,7 @@ A small project to analyze the Chicago job market using Python, Docker, and Tabl
 - GitHub Actions (CI/CD)
 - Kubernetes (for container orchestration)
 - Tableau (for visualization) (TBD)
+- [View Tableau Dashboard](https://public.tableau.com/app/profile/cameron.serr/viz/ChicagoJobMarketDashboard-PythonTableauAutomationProject/ChicagoTechJobMarketDashboard?publish=yes)
 
 ## Setup
 
